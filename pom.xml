@@ -20,17 +20,32 @@
 	</properties>
 
 	<dependencies>
+
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+			<!-- remover a versão aqui !!! -->
+			<!-- <version>3.0.0</version> -->
+		</dependency>
+
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-gateway</artifactId>
 		</dependency>
 
+		<!-- A dependência abaixo é para remover os WARNINGs
+		WARNING: An illegal reflective access operation has occurred
+		WARNING: Illegal reflective access by org.springframework.cglib.core.ReflectUtils$1
+		WARNING: Please consider reporting this to the maintainers of org.springframework.cglib.core.ReflectUtils$1
+		WARNING: Use -illegal-access=warn to enable warnings of further illegal reflective access operations
+		WARNING: All illegal access operations will be denied in a future release
+		-->
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-devtools</artifactId>
-			<scope>runtime</scope>
-			<optional>true</optional>
+			<groupId>javax.xml.bind</groupId>
+			<artifactId>jaxb-api</artifactId>
+			<version>2.3.0</version>
 		</dependency>
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
